@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer type="module" src="./script.js"></script>
+    <link rel="shortcut icon" href="Logo/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="card">
+        <h2>Password Generator</h2>
+        
+        <div class="result-container">
+            <input type="text" id="result" readonly placeholder="Click Generate">
+            <button id="copy-btn" title="Copy to clipboard">📋</button>
+        </div>
+
+        <div class="settings">
+            <div class="input-group">
+                <label for="number-input">Password Length</label>
+                <input type="number" min="4" max="50" id="number-input" value="4">
+            </div>
+
+            <label class="checkbox-wrapper">
+                <span>Include Digits</span>
+                <input type="checkbox" id="digits" checked>
+            </label>
+
+            <label class="checkbox-wrapper">
+                <span>Include Uppercase</span>
+                <input type="checkbox" id="uppercase">
+            </label>
+
+            <label class="checkbox-wrapper">
+                <span>Include Lowercase</span>
+                <input type="checkbox" id="lowercase" checked>
+            </label>
+
+            <label class="checkbox-wrapper">
+                <span>Include Symbols</span>
+                <input type="checkbox" id="symbols">
+            </label>
+        </div>
+
+        <button id="gen-btn" class="main-btn">Generate Password</button>
+        <button id="reset-btn" class="main-btn">Reset Page</button>
+    </div>
+</body>
+</html>

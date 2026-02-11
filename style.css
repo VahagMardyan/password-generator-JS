@@ -1,0 +1,144 @@
+:root {
+    --bg-color: #f0f2f5;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --text-color: #1c1e21;
+    --accent-color: #4a90e2;
+    --input-bg: #ffffff;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #0f172a;
+        --card-bg: rgba(30, 41, 59, 0.8);
+        --text-color: #f8fafc;
+        --accent-color: #38bdf8;
+        --input-bg: #1e293b;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.result-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+#result {
+    flex-grow: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid var(--accent-color);
+    background: var(--input-bg);
+    color: var(--text-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+#copy-btn {
+    padding: 0 12px;
+    border-radius: 10px;
+    border: none;
+    background: var(--accent-color);
+    color: white;
+    cursor: pointer;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#number-input {
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+.checkbox-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.main-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    background: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.main-btn:active {
+    transform: scale(0.98);
+}
+
+#reset-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+#reset-btn:hover {
+    opacity: 1;
+    background: rgba(74, 144, 226, 0.1);
+}
+
+#reset-btn:active {
+    transform: scale(0.98);
+}
+
