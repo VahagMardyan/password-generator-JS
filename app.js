@@ -17,7 +17,7 @@ export default function generate(passwordSize, includeDigits=true, includeUpperc
         return "Invalid size!";
     }
 
-    if(size < 3) {
+    if(size < 4) {
         return "Size is too small!";
     }
 

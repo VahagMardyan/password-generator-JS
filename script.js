@@ -23,8 +23,6 @@ isAll.addEventListener('change', ()=> {
 gen_btn.addEventListener('click',()=>{
     result.value = generate(passwordLength.value, isDigit.checked, 
         isUppercase.checked, isLowercase.checked, isSymbol.checked, isSpecialSymbol.checked);
-    console.log(isDigit.checked, 
-        isUppercase.checked, isLowercase.checked, isSymbol.checked, isSpecialSymbol.checked);
 });
 
 document.addEventListener('keyup',(event)=>{
